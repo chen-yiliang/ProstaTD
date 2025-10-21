@@ -43,10 +43,12 @@ Each instance within every frame of the dataset video contains following attribu
 2. Pending fields will be released upon acceptance.
 3. All pending fields currently use placeholder value as empty set `∅` or `Null` in our json annotation file. 
 4. Some frames were removed due to non-surgical scenes or adverse environmental factors (e.g., extreme reflection); overall, the frames are visually continuous​.
+5. For triplet names, please refer to the [file](https://github.com/yik-leung/ProstaTD/blob/main/preprocess/build_yolo_dataset_triplet_only.py#L51-L140) in lines 51 to 140.
+6. Our [triplet map](https://github.com/yik-leung/ProstaTD/blob/main/triplet_maps_v2.txt) is provided for the disentanglement.
 
 ## ⚙️ Dataset Preprocess
 
-To prepare the dataset, first go to the `preprocess` directory and run the following scripts:
+To prepare the dataset, first go to the [preprocess](preprocess/) directory and run the following scripts:
 
 ```bash
 # Step 1: enter the preprocess directory
