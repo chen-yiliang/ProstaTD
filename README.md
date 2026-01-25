@@ -43,8 +43,8 @@ Each instance within every frame of the dataset video contains following attribu
 2. Pending fields will be released upon acceptance.
 3. All pending fields currently use placeholder value as empty set `∅` or `Null` in our json annotation file. 
 4. Some frames were removed due to non-surgical scenes or adverse environmental factors (e.g., extreme reflection); overall, the frames are visually continuous​.
-5. For triplet names, please refer to the [file](https://github.com/yik-leung/ProstaTD/blob/main/preprocess/build_yolo_dataset_triplet_only.py#L51-L140) in lines 51 to 140.
-6. Our [triplet map](https://github.com/yik-leung/ProstaTD/blob/main/triplet_maps_v2.txt) is provided for the disentanglement.
+5. For triplet names, please refer to the [file](https://github.com/chen-yiliang/ProstaTD/blob/main/preprocess/build_yolo_dataset_triplet_only.py#L51-L140) in lines 51 to 140.
+6. Our [triplet map](https://github.com/chen-yiliang/ProstaTD/blob/main/triplet_maps_v2.txt) is provided for the disentanglement.
 
 ## ⚙️ Dataset Preprocess
 
@@ -91,19 +91,7 @@ For details, please check **the models** at [training folder](training/README.md
 
 ## 🖌️ Annotation Software
 
-<table>
-  <tr>
-    <td><center><img src="images/example1.png" width="100%"></center></td>
-    <td><center><img src="images/example2.png" width="100%"></center></td>
-  </tr>
-  <tr>
-    <td><center>Our Triplet-labelme annotation tool</center></td>
-    <td><center>Our SurgLabel annotation tool</center></td>
-  </tr>
-</table>
-
-To access our annotation tools, please visit [Surglabel](https://github.com/yik-leung/Surglabel)
-
+To access our annotation tools, please visit [Surglabel](https://github.com/chen-yiliang/Surglabel)
   
 ## 🙏 Acknowledgement
 Part of the codes are borrowed from [mmdetection](https://github.com/open-mmlab/mmdetection), [ultralytics](https://github.com/ultralytics/ultralytics), [detectron2](https://github.com/facebookresearch/detectron2), [LabelMe](https://github.com/wkentaro/labelme).
