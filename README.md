@@ -69,13 +69,19 @@ python build_yolo_dataset_triplet_only.py
 <a id="download-access"></a>
 ## 📥 Download Access
 
-To request access to the ProstaTD Dataset, please fill out our [request form](https://forms.gle/W8aGcb5c48YCXV1L9).
+To request access to the ProstaTD Dataset, please fill out our [request form](https://forms.gle/W8aGcb5c48YCXV1L9). Advice use **Gmail**​​ for submission (other emails may find the reply in spam folders).  
 
-**Important Notes:**  
-🔹 **Recommended Email**: Advice use **Gmail**​​ for submission (other emails may find the reply in spam folders).  
-🔹 **Response Time**: If you haven't received access instructions within **one hour**, please send a follow-up email to us with subject "ProstaTD Access Request - [Your Name]". We'll manually process your request and send the download link within **2 business days**. 
+> [!IMPORTANT]  
+> There are two versions available:  
+> • **Version 1 (ProstaTDv1)** — the version used in the original paper  
+> • **Version 2 (ProstaTDv2)** — the fixed version (details to be announced later)
+>   
+> We strongly recommend using **ProstaTDv2** for your experiments.  
+>   
+> We plan to release the full annotation and other resources at the end of April through the ICLR conference. Stay tuned!  
+>   
+> Additionally, the full dataset and annotation release will also be migrated to **ModelScope** and **Hugging Face**. The current triplet classification annotation will continue to be temporarily supported on **Kaggle** until the migration to the new platforms is complete.
 
-Some classification results of our ProstaTD (Prostate21) can be found at [SurgVISTA](https://arxiv.org/pdf/2506.02692)
 
 ## 📈 Evaluation Toolkit
 
