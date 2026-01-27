@@ -11,16 +11,17 @@ ProstaTD is the first fully supervised surgical triplet detection dataset curate
 
 ## 📑 Table of Content
 1. [Download Dataset](#download-access)
-2. [Dataset Preprocess](#%EF%B8%8F-preprocess)
-3. [Annotation Software](#%EF%B8%8F-annotation-software)
-4. [Evaluation Toolkit](ivtdmetrics/README.md)
+2. [Validation Protocol](#cross-validation)
+3. [Dataset Preprocess](#dataset-preprocess)
+4. [Annotation Software](#%EF%B8%8F-annotation-software)
+5. [Evaluation Toolkit](ivtdmetrics/README.md)
    - [Installation](ivtdmetrics/#ivtd_installation)
    - [Evaluation Example](ivtdmetrics/#ivtd_example)
-5. [Benchmark Methods](training/README.md)
+6. [Benchmark Methods](training/README.md)
    - [Library Installation](training/#bench_install)
    - [YOLO-based Mehtods](training/#bench_yolo)
    - [DETR-based Mehtods](training/#bench_detr)
-6. [Postprocess Visualization](training/#postprocess)
+7. [Postprocess Visualization](training/#postprocess)
   
 ## 🗂️ Dataset Format
 (Taking Yolo format as an example)
@@ -46,6 +47,7 @@ Each instance within every frame of the dataset video contains following attribu
 5. For triplet names, please refer to the [file](https://github.com/chen-yiliang/ProstaTD/blob/main/preprocess/build_yolo_dataset_triplet_only.py#L51-L140) in lines 51 to 140.
 6. Our [triplet map](https://github.com/chen-yiliang/ProstaTD/blob/main/triplet_maps_v2.txt) is provided for the disentanglement.
 
+<a id="dataset-preprocess"></a>
 ## ⚙️ Dataset Preprocess
 
 To prepare the dataset, first go to the [preprocess](preprocess/) directory and run the following scripts:
@@ -73,13 +75,25 @@ To request access to the ProstaTD Dataset, please fill out our [request form](ht
 
 > [!IMPORTANT]  
 > There are two versions available:  
-> • **Version 1 (ProstaTDv1)** — the version used in the original paper  
-> • **Version 2 (ProstaTDv2)** — the fixed version (details to be announced later)
+> • Version 1 (ProstaTDv1): the version used in the original paper  
+> • Version 2 (ProstaTDv2): the fixed version (details to be announced later)
 >   
 > We strongly recommend using **ProstaTDv2** for your experiments.  
 >   
 > We plan to release the full annotation and other resources at the end of April through the ICLR conference. Stay tuned!
 
+<a id="cross-validation"></a>
+## 🔄 Cross-Validation Protocol
+
+| Fold | Test Videos | Training Videos |
+|:---|:---|:---|
+| 1 | esadv1, psiv1, psiv4, pwhv8 | Remaining videos |
+| 2 | esadv2, psiv7, pwhv4, pwhv9 | Remaining videos |
+| 3 | esadv3, psiv14, pwhv1, psiv2 | Remaining videos |
+| 4 | esadv4, psiv15, pwhv2, pwhv7 | Remaining videos |
+| 5 | psiv3, psiv21, pwhv3, pwhv5, pwhv6 | Remaining videos |
+
+**Note:** Unlike the setting in the paper, we recommend a nnUNet-style/COCO-style split protocol that **does not use a validation set**. The selection of validation videos can severely bias performance metrics, as these videos often contain **rare triplets** (a phenomenon also observed in CholecT50). Consequently, a more robust setting is to eliminate the validation set and perform cross-validation directly on the test folds.
 
 ## 📈 Evaluation Toolkit
 
