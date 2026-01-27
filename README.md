@@ -78,9 +78,7 @@ To request access to the ProstaTD Dataset, please fill out our [request form](ht
 >   
 > We strongly recommend using **ProstaTDv2** for your experiments.  
 >   
-> We plan to release the full annotation and other resources at the end of April through the ICLR conference. Stay tuned!  
->   
-> Additionally, the full dataset and annotation release will also be migrated to **ModelScope** and **Hugging Face**. The current triplet classification annotation will continue to be temporarily supported on **Kaggle** until the migration to the new platforms is complete.
+> We plan to release the full annotation and other resources at the end of April through the ICLR conference. Stay tuned!
 
 
 ## 📈 Evaluation Toolkit
