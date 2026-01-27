@@ -9,6 +9,10 @@ ProstaTD is the first fully supervised surgical triplet detection dataset curate
   <img src="images/dataset.png" width="80%"/>
 </div><br/>
 
+> [!NOTE]
+> We plan to release the full annotation and other resources at the end of April through the ICLR conference. Stay tuned!
+
+
 ## 📑 Table of Content
 1. [Download Dataset](#download-access)
 2. [Validation Protocol](#cross-validation)
@@ -93,13 +97,17 @@ To request access to the ProstaTD Dataset, please fill out our [request form](ht
 | 4 | esadv4, psiv15, pwhv2, pwhv7 | Remaining videos |
 | 5 | psiv3, psiv21, pwhv3, pwhv5, pwhv6 | Remaining videos |
 
-**Note:** Unlike the setting in the paper, we recommend a nnUNet-style/COCO-style split protocol that **does not use a validation set**. The selection of validation videos can severely bias performance metrics, as these videos often contain **rare triplets** (a phenomenon also observed in CholecT50). Consequently, a more robust setting is to eliminate the validation set and perform cross-validation directly on the test folds.
+> [!WARNING]
+>  Unlike the setting in the paper, we recommend a nnUNet-style/COCO-style split protocol that **does not use a validation set**. The selection of validation videos can severely bias performance metrics, as these videos often contain **rare triplets** (a phenomenon also observed in CholecT50). Consequently, a more robust setting is to eliminate the validation set and perform cross-validation directly on the test folds.
 
 ## 📈 Evaluation Toolkit
 
 To ensure fair comparison of model performance and to enable future evaluation across different surgical scenarios, we have also developed a dedicated **triplet detection evaluation toolkit**. This package provides consistent metrics and evaluation protocols tailored for **instrument–verb–target detection** tasks, helping the community to benchmark models under a unified standard.
 
 For details, please check our **Evaluation Toolkit** at [ivtdmetrics folder](ivtdmetrics/README.md) in this repo.
+
+> [!TIP]
+> Fair comparison between NMS-based and NMS-free methods is inherently challenging. The IoU threshold and confidence score significantly influence NMS performance, and taking the Top-100 predictions typically favors DETR approaches by design. Alternatively, using pycocotools for mAP calculation is also acceptable (results may slightly differ from Ultralytics), and the choice depends on your specific evaluation requirements.
 
 ## 🤖 Baseline Models and Training
 
@@ -116,6 +124,8 @@ Part of the codes are borrowed from [mmdetection](https://github.com/open-mmlab/
 
 ## 📜 License
 This repository is available for non-commercial scientific research purposes as defined in the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) with additional [ethical requirement](./LICENSE).
+> [!CAUTION]
+> Commercial use is prohibited. For academic and research use only.
 
 ## Citation
 ```bibtex
