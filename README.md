@@ -100,7 +100,7 @@ To request access to the ProstaTD Dataset, please fill out our [request form](ht
 | 4 | esadv4, psiv15, pwhv2, pwhv7 | Remaining videos |
 | 5 | psiv3, psiv21, pwhv3, pwhv5, pwhv6 | Remaining videos |
 
-> [!WARNING]
+> [!TIP]
 >  Unlike the setting in the paper, we recommend a nnUNet-style/COCO-style split protocol that **does not use a validation set**. The selection of validation videos can severely bias performance metrics (a phenomenon also observed in CholecT50), as these videos often contain **rare triplets**. Consequently, a more robust setting is to eliminate the validation set and perform cross-validation directly on the test folds.
 
 ## 📈 Evaluation Toolkit
