@@ -79,8 +79,8 @@ To request access to the ProstaTD Dataset, please fill out our [request form](ht
 
 > [!IMPORTANT]  
 > There are two versions available:  
-> • Version 1 (ProstaTDv1): the version used in the original paper  
-> • Version 2 (ProstaTDv2): the fixed version (details to be announced later)
+> • Version 1.1 (ProstaTDv1.1): includes only minimal refinements, such as removing a few overlapping instances. These marginal adjustments are not expected to affect model performance, and the experimental results should remain consistent with those reported in the paper.  
+> • Version 2.0 (ProstaTDv2.0): is the refined version with corrections performed on the 20 fps frames. In v1, annotations were conducted solely using 1 fps image frames. However, the lack of temporal context at 1 fps often makes it difficult even for experienced surgeons to accurately identify surgical triplets. To address this, we expanded the dataset to 20 fps and corrected the original 1 fps keyframes accordingly. The full 20 fps datasets will be released in our future journal version.
 >   
 > We strongly recommend using **ProstaTDv2** for your experiments.  
 >   
