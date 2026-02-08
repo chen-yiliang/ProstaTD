@@ -84,7 +84,7 @@ To request access to the ProstaTD Dataset, please fill out our [request form](ht
 >   
 > We strongly recommend using **ProstaTDv2** for your experiments.  
 >   
-> We plan to release the full annotation and other resources at the end of April through the ICLR conference. Stay tuned!
+> We plan to release the Bbox annotation and other resources at the end of April through the ICLR conference. Stay tuned!
 
 > [!WARNING]
 > In the ProstaTDv2 release (before Feb 6), we missed merging one category. Please re-download file using the same link as before (no need to re-apply).
