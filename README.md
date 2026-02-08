@@ -132,11 +132,12 @@ This repository is available for non-commercial scientific research purposes as 
 
 ## Citation
 ```bibtex
-@article{chen2025prostatd,
-  title     = {ProstaTD: Bridging Surgical Triplet from Classification to Fully Supervised Detection},
-  author    = {Yiliang Chen and Zhixi Li and Cheng Xu and Alex Qinyang Liu and Ruize Cui and Xuemiao Xu and Jeremy Yuen-Chun Teoh and Shengfeng He and Jing Qin},
-  journal   = {arXiv preprint arXiv:2506.01130},
-  year      = {2025}
+@inproceedings{prostatd,
+    title={ProstaTD: Bridging Surgical Triplet from Classification to Fully Supervised Detection},
+    author={Chen, Yiliang and Li, Zhixi and Xu, Cheng and Liu, Alex Qinyang and Cui, Ruize and Xu, Xuemiao and Teoh, Jeremy Yuen-Chun and He, Shengfeng and Qin, Jing},
+    booktitle={The Fourteenth International Conference on Learning Representations},
+    year={2026},
+    url={https://openreview.net/forum?id=0NkXZ98BjJ}
 }
 ```
 
