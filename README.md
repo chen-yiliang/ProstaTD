@@ -10,8 +10,7 @@ ProstaTD is the first fully supervised surgical triplet detection dataset curate
 </div><br/>
 
 > [!NOTE]
-> We plan to release the full annotation and other resources at the end of April through the ICLR conference. Stay tuned!
-
+> We plan to release the full annotation and other resources in **May**. Sorry for the inconvenience.
 
 ## 📑 Table of Content
 1. [Download Dataset](#download-access)
